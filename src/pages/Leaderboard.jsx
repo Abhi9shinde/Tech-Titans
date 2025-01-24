@@ -42,17 +42,14 @@ const LeaderCard = ({ rank, name, cupsSaved, co2Reduced, achievements, status })
 };
 
 const Leaderboard = () => {
-  const [timeFrame, setTimeFrame] = useState('week'); // Default time frame is "week"
-
-  // Filter the leaderboard data based on the selected time frame
+  const [timeFrame, setTimeFrame] = useState('week'); 
   const filteredData = leaderboardData.filter(item => item.timeFrame === timeFrame);
 
-  // Sort the filtered data by cupsSaved (or you can use other metrics like co2Reduced)
   const sortedData = filteredData.sort((a, b) => b.cupsSaved - a.cupsSaved);
 
   return (
     <div className="w-full">
-      <section id="leaderboard" className="p-6 w-full">
+      <section id="leaderboard" className="p-6 w-full h-screen overflow-y-scroll">
         <div className="bg-neutral-800 rounded-lg border border-neutral-200/30">
           <div className="p-6">
             <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4 mb-6">
