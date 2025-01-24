@@ -6,9 +6,9 @@ function Overview() {
       <section id="overview" className="p-6 overflow-y-scroll">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {/* Total Impact Card */}
-          <div className="bg-white p-6 rounded-lg border border-neutral-200">
+          <div className="bg-neutral-800 p-6 rounded-lg ">
             <div className="flex justify-between items-center mb-4">
-              <h3 className="text-lg font-semibold text-neutral-800">Total Impact</h3>
+              <h3 className="text-lg font-semibold text-white">Total Impact</h3>
               <span className="bg-emerald-100 text-emerald-800 text-sm px-3 py-1 rounded-full">
                 Last 30 days
               </span>
@@ -21,38 +21,38 @@ function Overview() {
                 { label: 'Challenges Won', value: '15' },
               ].map((item, index) => (
                 <div key={index}>
-                  <p className="text-sm text-neutral-500">{item.label}</p>
-                  <p className="text-2xl font-bold text-neutral-800">{item.value}</p>
+                  <p className="text-sm text-neutral-300">{item.label}</p>
+                  <p className="text-2xl font-bold text-white">{item.value}</p>
                 </div>
               ))}
             </div>
           </div>
 
           {/* Active Challenge Card */}
-          <div className="bg-white p-6 rounded-lg border border-neutral-200">
+          <div className="bg-neutral-800 p-6 rounded-lg ">
             <div className="flex justify-between items-center mb-4">
-              <h3 className="text-lg font-semibold text-neutral-800">Active Challenge</h3>
+              <h3 className="text-lg font-semibold text-white">Active Challenge</h3>
               <span className="bg-blue-100 text-blue-800 text-sm px-3 py-1 rounded-full">
                 5 days left
               </span>
             </div>
-            <h4 className="text-neutral-800 font-medium mb-2">Zero Cup November</h4>
-            <p className="text-sm text-neutral-600 mb-4">
+            <h4 className="text-neutral-200 font-medium mb-2">Zero Cup November</h4>
+            <p className="text-sm text-neutral-400 mb-4">
               Use reusable cups for all beverages this month.
             </p>
             <div className="w-full bg-neutral-100 rounded-full h-2 mb-4">
               <div className="bg-blue-600 h-2 rounded-full" style={{ width: '75%' }}></div>
             </div>
             <div className="flex justify-between text-sm">
-              <span className="text-neutral-600">Progress: 75%</span>
-              <span className="text-neutral-600">Goal: 100%</span>
+              <span className="text-neutral-400">Progress: 75%</span>
+              <span className="text-neutral-400">Goal: 100%</span>
             </div>
           </div>
 
           {/* Quick Actions Card */}
-          <div className="bg-white p-6 rounded-lg border border-neutral-200">
-            <h3 className="text-lg font-semibold text-neutral-800 mb-4">Quick Actions</h3>
-            <div className="space-y-3">
+          <div className="bg-neutral-800 p-6 rounded-lg ">
+            <h3 className="text-lg font-semibold text-white mb-4">Quick Actions</h3>
+            <div className="space-y-3 text-white">
               {[
                 {
                   label: 'Log Reusable Cup Usage',
@@ -84,33 +84,33 @@ function Overview() {
           </div>
 
           {/* Weekly Usage Statistics */}
-        
-          <div className="md:col-span-2 lg:col-span-2 bg-white p-6 rounded-lg border border-neutral-200">
-  <h3 className="text-lg font-semibold text-neutral-800 mb-4">Weekly Usage Statistics</h3>
-  <div className="h-64 flex items-end justify-between space-x-2">
-    {[
-      { day: 'Mon', height: '60%' },
-      { day: 'Tue', height: '80%' },
-      { day: 'Wed', height: '40%' },
-      { day: 'Thu', height: '70%' },
-      { day: 'Fri', height: '90%' },
-      { day: 'Sat', height: '50%' },
-      { day: 'Sun', height: '30%' },
-    ].map((day, index) => (
-      <div key={index} className="flex-1 flex flex-col items-center justify-end h-full">
-        {/* Use inline style for dynamic height */}
-        <div className="bg-emerald-200 rounded-t-lg w-20" style={{ height: day.height }}></div>
-        {/* Optionally, you can show the day label */}
-        <span className="text-sm text-neutral-600 mt-2">{day.day}</span>
-      </div>
-    ))}
-  </div>
-</div>
+
+          <div className="md:col-span-2 lg:col-span-2 bg-neutral-800 p-6 rounded-lg ">
+            <h3 className="text-lg font-semibold text-white mb-4">Weekly Usage Statistics</h3>
+            <div className="h-64 flex items-end justify-between space-x-2">
+              {[
+                { day: 'Mon', height: '60%' },
+                { day: 'Tue', height: '80%' },
+                { day: 'Wed', height: '40%' },
+                { day: 'Thu', height: '70%' },
+                { day: 'Fri', height: '90%' },
+                { day: 'Sat', height: '50%' },
+                { day: 'Sun', height: '30%' },
+              ].map((day, index) => (
+                <div key={index} className="flex-1 flex flex-col items-center justify-end h-full">
+                  {/* Use inline style for dynamic height */}
+                  <div className="bg-emerald-400 rounded-t-lg w-20" style={{ height: day.height }}></div>
+                  {/* Optionally, you can show the day label */}
+                  <span className="text-sm text-neutral-400 mt-2">{day.day}</span>
+                </div>
+              ))}
+            </div>
+          </div>
 
 
           {/* Environmental Impact */}
-          <div className="lg:col-span-1 bg-white p-6 rounded-lg border border-neutral-200">
-            <h3 className="text-lg font-semibold text-neutral-800 mb-4">Environmental Impact</h3>
+          <div className="lg:col-span-1 bg-neutral-800 p-6 rounded-lg ">
+            <h3 className="text-lg font-semibold text-white mb-4">Environmental Impact</h3>
             {[
               { label: 'Trees Saved', value: '1.2', width: '65%', color: 'green' },
               { label: 'Water Saved (L)', value: '547', width: '75%', color: 'blue' },
@@ -118,8 +118,8 @@ function Overview() {
             ].map((impact, index) => (
               <div key={index} className="mb-4">
                 <div className="flex justify-between mb-2">
-                  <span className="text-sm text-neutral-600">{impact.label}</span>
-                  <span className="text-sm font-medium text-neutral-800">{impact.value}</span>
+                  <span className="text-sm text-neutral-400">{impact.label}</span>
+                  <span className="text-sm font-medium text-neutral-400">{impact.value}</span>
                 </div>
                 <div className="w-full bg-neutral-100 rounded-full h-2">
                   <div className={`bg-${impact.color}-500 h-2 rounded-full`} style={{ width: impact.width }}></div>

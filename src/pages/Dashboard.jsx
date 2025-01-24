@@ -9,20 +9,20 @@ import Overview from './Overview';
 import Sidebar from '../components/Sidebar';
 import DashNav from '../components/DashNav';
 
- function Dashboard() {
+function Dashboard() {
   return (
     <div className="dashboard ">
-    <DashNav/>
-    <div className="flex w-full flex-shrink-0 bg-neutral-50">
-    <Sidebar />
-      <Routes>
-        <Route path="/" element={<Navigate to="overview" />} />
-        <Route path="overview" element={<Overview/>} />
-        <Route path="leaderboard" element={<Leaderboard />} />
-        <Route path="impact" element={<Impact />} />
-      </Routes>
+      <DashNav />
+      <div className="flex w-full flex-shrink-0 bg-neutral-900">
+        <Sidebar />
+        <Routes>
+          <Route path="/" element={<Navigate to="overview" />} />
+          <Route path="overview" element={<Overview />} />
+          <Route path="leaderboard" element={<Leaderboard />} />
+          <Route path="impact" element={<Impact />} />
+        </Routes>
+      </div>
     </div>
-  </div>
   );
 }
 

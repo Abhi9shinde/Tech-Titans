@@ -4,14 +4,14 @@ import logo from '/logo.avif';
 function DashNav() {
     return (
         <div>
-            <div class="sticky top-0 z-10 bg-white border-b border-neutral-200/20 px-6 py-4" id="el-zbtsvgpr">
+            <div class="sticky top-0 z-10 bg-neutral-900 border-b border-neutral-200/20 px-6 py-4" id="el-zbtsvgpr">
                 <div class="flex items-center justify-between" id="el-p6rsvhy0">
                     <div className="flex items-center">
-                    <a href="/">
-                        <div className="flex-shrink-0 flex gap-2 items-center">
-                            <img src={logo} alt="EcoCup logo" className="w-8 h-8 rounded-full" />
-                            <span className="text-xl font-bold">EcoCup</span>
-                        </div>
+                        <a href="/">
+                            <div className="flex-shrink-0 flex gap-2 items-center">
+                                <img src={logo} alt="EcoCup logo" className="w-8 h-8 rounded-full" />
+                                <span className="text-xl font-bold text-white">EcoCup</span>
+                            </div>
                         </a>
                     </div>
                     <div class="flex items-center space-x-4" id="el-sxrpoc17">
