@@ -49,9 +49,9 @@ function HeroSection() {
                             </div>
                         </div>
                     </div>
-                    <div className="absolute bottom-0 left-0 w-full" id="el-lsmvab3b">
-                        <svg className="w-full h-12 text-white" viewBox="0 0 1200 120" preserveAspectRatio="none" id="el-aghpgdyp">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none" id="el-emn75lbh">
+                    <div className="absolute bottom-0 left-0 w-full" >
+                        <svg className="w-full h-12 text-white" viewBox="0 0 1200 120" preserveAspectRatio="none" >
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none" >
 
                             </svg>
                         </svg>
