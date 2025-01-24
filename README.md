@@ -1,14 +1,63 @@
 #   EcoCup
+
+## Screenshots
+
+**Here's a glimpse of the EcoCup Rethink website in action:**
+
+| Screenshot 1 | Screenshot 2 | Screenshot 3 |
+|---|---|---|
+| <img src="public/screenshot (1).png" alt="Screenshot 1" width="400"> | <img src="public/screenshot (2).png" alt="Screenshot 2" width="400"> | <img src="public/screenshot (3).png" alt="Screenshot 3" width="400"> | 
+
+| Screenshot 4 | Screenshot 5 | Screenshot 6 |
+|---|---|---|
+| <img src="public/screenshot (4).png" alt="Screenshot (4)" width="400"> | <img src="public/screenshot (5).png" alt="Screenshot 5" width="400"> | <img src="public/screenshot (6).png" alt="Screenshot 6" width="400"> |
+
+| Screenshot 7 | Screenshot 8 | Screenshot 9 |
+|---|---|---|
+| <img src="public/screenshot (7).png" alt="Screenshot (7)" width="400"> | <img src="public/screenshot (8).png" alt="Screenshot 8" width="400"> | <img src="public/screenshot (9).png" alt="Screenshot 9" width="400"> |**Introduction**
+
+
+## Installation
+
+**1. Clone the Repository**
+
+```bash
+git clone <repository_url>
+cd <project_directory>
+```
+
+**2. Install Dependencies**
+```bash
+npm install
+```
+
+**3.Start the Development Server**
+
+```bash
+npm run dev
+```
+
+## Tech Stack
+
+This project utilizes the following technologies:
+
+* **Frontend:**
+    * **React:** A JavaScript library for building user interfaces.
+    * **Framer Motion:** A motion library for building dynamic and interactive user interfaces.
+    * **Tailwind CSS:** A utility-first CSS framework for rapid and efficient styling.
+
+* **Build Tool:**
+    * **Vite:** A fast and modern build tool for web development.
+
+* **Package Manager:**
+    * **npm:** Node Package Manager for managing project dependencies.
+
+
 # Environmental Impact of Disposable Paper Cups
 
 
-![Screenshot 1](public/screenshot.png) 
-
-**Introduction**
-
-This document outlines the lifecycle of a disposable paper cup and its associated environmental impacts.
-
 **Phases of Environmental Impact:**
+This document outlines the lifecycle of a disposable paper cup and its associated environmental impacts.
 
 1. **Raw Material Extraction:**
     * **Deforestation:** Tree cutting for wood pulp leads to deforestation, habitat loss, and biodiversity decline.
