@@ -37,22 +37,22 @@ function Impact() {
                                 </select>
                             </div>
                             <div className="h-64 flex items-end space-x-2">
-                            {[
-                { day: 'Jan', height: '60%' },
-                { day: 'Feb', height: '80%' },
-                { day: 'March', height: '40%' },
-                { day: 'April', height: '70%' },
-                { day: 'May', height: '90%' },
-                { day: 'June', height: '50%' },
-              ].map((day, index) => (
-                <div key={index} className="flex-1 flex flex-col items-center justify-end h-full">
-                  {/* Use inline style for dynamic height */}
-                  <div className="bg-emerald-400 rounded-t-lg w-20" style={{ height: day.height }}></div>
-                  {/* Optionally, you can show the day label */}
-                  <span className="text-sm text-neutral-400 mt-2">{day.day}</span>
-                </div>
-              ))}
-                             
+                                {[
+                                    { day: 'Jan', height: '60%' },
+                                    { day: 'Feb', height: '80%' },
+                                    { day: 'March', height: '40%' },
+                                    { day: 'April', height: '70%' },
+                                    { day: 'May', height: '90%' },
+                                    { day: 'June', height: '50%' },
+                                ].map((day, index) => (
+                                    <div key={index} className="flex-1 flex flex-col items-center justify-end h-full">
+                                        {/* Use inline style for dynamic height */}
+                                        <div className="bg-emerald-400 rounded-t-lg w-20" style={{ height: day.height }}></div>
+                                        {/* Optionally, you can show the day label */}
+                                        <span className="text-sm text-neutral-400 mt-2">{day.day}</span>
+                                    </div>
+                                ))}
+
                             </div>
                         </div>
                     </div>
@@ -88,7 +88,7 @@ function Impact() {
                                 <div className="flex items-center justify-between p-3 bg-neutral-50 rounded-lg">
                                     <div className="flex items-center">
                                         <svg className="w-5 h-5 text-green-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                            <path stroke-linecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
                                         </svg>
                                         <span className="text-sm text-neutral-700">Trees Preserved</span>
                                     </div>
@@ -97,7 +97,7 @@ function Impact() {
                                 <div className="flex items-center justify-between p-3 bg-neutral-50 rounded-lg">
                                     <div className="flex items-center">
                                         <svg className="w-5 h-5 text-blue-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                            <path stroke-linecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
                                         </svg>
                                         <span className="text-sm text-neutral-700">Water Saved (L)</span>
                                     </div>
@@ -106,7 +106,7 @@ function Impact() {
                                 <div className="flex items-center justify-between p-3 bg-neutral-50 rounded-lg">
                                     <div className="flex items-center">
                                         <svg className="w-5 h-5 text-purple-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                            <path stroke-linecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
                                         </svg>
                                         <span className="text-sm text-neutral-700">Plastic Reduced (kg)</span>
                                     </div>
