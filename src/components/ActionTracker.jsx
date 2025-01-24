@@ -19,7 +19,6 @@ function ActionTracker() {
   const [celebrate, setCelebrate] = useState(false); // To trigger confetti
   const days = ['M', 'T', 'W', 'T', 'F', 'S', 'S'];
 
-  // Populate weekly tracker on component mount
   useEffect(() => {
     const tracker = days.map((day, index) => ({
       day,
@@ -28,7 +27,6 @@ function ActionTracker() {
     setWeeklyTracker(tracker);
   }, []);
 
-  // Form submission handler for logging actions
   const handleLogAction = (e) => {
     e.preventDefault();
     const form = e.target;
