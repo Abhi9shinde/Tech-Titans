@@ -16,10 +16,10 @@ function HeroSection() {
               Join the movement to combat the environmental and health risks of disposable paper cups through innovative tech solutions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <a href="#get-involved" className="bg-green-600 hover:bg-green-700 text-white px-8 py-3 rounded-full font-medium text-center transition-all transform hover:scale-105">
-                Join The Challenge
+              <a href="#get-involved" className="bg-green-600 hover:bg-green-700 text-white px-4 py-3 rounded-full font-medium text-center transition-all transform hover:scale-105 inline-flex items-center space-x-2">
+                Join The Challenge <span><img src="/images/ecoFriendly.avif" alt="" className="rounded-full h-8 ml-2" /></span>
               </a>
-              <a href="#impact-stats" className="border border-white hover:bg-white hover:text-neutral-900 px-8 py-3 rounded-full font-medium text-center transition-all">
+              <a href="#impact-stats" className="border border-white hover:bg-white hover:text-neutral-900 px-8 py-3 rounded-full font-medium text-center transition-all items-center">
                 Learn More
               </a>
             </div>
