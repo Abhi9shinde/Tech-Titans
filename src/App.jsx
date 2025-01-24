@@ -1,29 +1,23 @@
 import React from 'react'
-import Navbar from './components/Navbar'
-import Footer from './components/Footer'
-import HeroSection from './components/HeroSection'
-import ImpactStats from './components/ImpactStats'
-import EnvironmentalRisks from './components/EnvironmentalRisks'
-import HealthAwareness from './components/HealthAwareness'
-import SustainableAlternatives from './components/SustainableAlternatives'
-import Testimonials from './components/Testimonials'
-import CommunityDashboard from './components/CommunityDashboard'
-import ActionTracker from './components/ActionTracker'
 
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from './pages/Home';
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
+import Phases from './pages/Phases';
 function App() {
   return (
     <div>
-
+      <Router>
       <Navbar />
-      <HeroSection />
-      <ImpactStats />
-      <EnvironmentalRisks />
-      <HealthAwareness />
-      <SustainableAlternatives />
-      <CommunityDashboard />
-      <ActionTracker />
-      <Testimonials />
+      
+      <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/phase" element={<Phases/>} />
+        </Routes>
       <Footer />
+
+        </Router>
     </div>
   )
 }

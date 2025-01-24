@@ -189,11 +189,8 @@ function ActionTracker() {
             </div>
           </div>
 
-          
-        </div>
-      </section>
-      {/* Confetti Celebration */}
-      <Confetti 
+          {/* Confetti Celebration */}
+        {celebrate &&  <Confetti 
           drawShape={ctx => {
             ctx.beginPath()
             for(let i = 0; i < 22; i++) {
@@ -207,7 +204,10 @@ function ActionTracker() {
           }}
         
            width={width}
-      height={height}/>
+      height={height}/>}
+         
+        </div>
+      </section>
     </div>
   );
 }

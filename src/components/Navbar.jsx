@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import logo from '/logo.avif';
-import { SignInButton } from '@clerk/clerk-react';
+import { Link, NavLink } from 'react-router-dom'
 
 const Navbar = () => {
     const [isMenuVisible, setIsMenuVisible] = useState(false);
@@ -19,9 +19,10 @@ const Navbar = () => {
     }, []);
 
     const links = [
-        { href: '#hero', label: 'Home' },
+        { href: '/', label: 'Home' },
         { href: '#impact-stats', label: 'Impact' },
         { href: '#environmental-risks', label: 'Risks' },
+        { href: '/phase', label: 'Phases' },
         { href: '#health-awareness', label: 'Health' },
         { href: '#sustainable-alternatives', label: 'Solutions'  },
         { href: '#community-dashboard', label: 'Community' },
@@ -35,7 +36,7 @@ const Navbar = () => {
                     {/* Logo Section */}
                     <div className="flex items-center">
                         <div className="flex-shrink-0 flex gap-2 items-center">
-                            <img src={logo} alt="EcoCup logo" className="w-8 h-8 rounded-full" />
+                            <a href="/"><img src={logo} alt="EcoCup logo" className="w-8 h-8 rounded-full" /></a>
                             <span className="text-xl font-bold">EcoCup</span>
                         </div>
                     </div>
@@ -87,17 +88,15 @@ const Navbar = () => {
 
             {/* Mobile Menu */}
             <div
-                className={`bg-neutral-900 px-2 pt-2 pb-3 space-y-1 sm:px-3 ${
-                    isMenuVisible ? 'block' : 'hidden'
-                }`}
+                className={`bg-neutral-900 px-2 pt-2 pb-3 space-y-1 sm:px-3 ${isMenuVisible ? 'block' : 'hidden'
+                    }`}
             >
                 {links.map((link) => (
                     <a
                         key={link.href}
                         href={link.href}
-                        className={`block hover:bg-neutral-700 px-3 py-2 rounded-md text-base font-medium transition-all ${
-                            link.special ? 'bg-green-600 hover:bg-green-700 mt-4' : ''
-                        }`}
+                        className={`block hover:bg-neutral-700 px-3 py-2 rounded-md text-base font-medium transition-all ${link.special ? 'bg-green-600 hover:bg-green-700 mt-4' : ''
+                            }`}
                         onClick={() => setIsMenuVisible(false)}
                     >
                         {link.label}
