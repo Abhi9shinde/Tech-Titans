@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
+import Confetti from 'react-confetti';
+
+import { useWindowSize } from 'react-use'
 
 function ActionTracker() {
-  // State for tracking data
   const [weeklyGoal, setWeeklyGoal] = useState(75);
   const [progressBarWidth, setProgressBarWidth] = useState(75);
   const [weeklyCups, setWeeklyCups] = useState(15);
@@ -11,9 +13,10 @@ function ActionTracker() {
     { type: 'Influenced Others', location: 'Student Center', time: '5 hours ago' },
     { type: 'Refused Disposable Cup', location: 'Library Café', time: '1 day ago' }
   ]);
+  const { width, height } = useWindowSize()
 
-  // State for the weekly tracker
   const [weeklyTracker, setWeeklyTracker] = useState([]);
+  const [celebrate, setCelebrate] = useState(false); // To trigger confetti
   const days = ['M', 'T', 'W', 'T', 'F', 'S', 'S'];
 
   // Populate weekly tracker on component mount
@@ -28,14 +31,28 @@ function ActionTracker() {
   // Form submission handler for logging actions
   const handleLogAction = (e) => {
     e.preventDefault();
-    setProgressBarWidth((prev) => Math.min(prev + 5, 100));
-    setWeeklyCups((prev) => prev + 1);
-    setMonthlyAverage((prev) => Math.floor((prev + 1) / 2)); // Sample logic to update monthly average
+    const form = e.target;
+    const actionType = form.actionType.value;
+    const cupsSaved = parseInt(form.cupsSaved.value, 10);
+    const location = form.location.value;
 
-    // Simulating recent actions update (this can be replaced with real data)
-    setRecentActions([
-      ...recentActions,
-      { type: 'Used Reusable Cup', location: 'Library', time: 'Just Now' }
+    // Calculate new progress and check if it reaches 100%
+    const newProgress = Math.min(progressBarWidth + (cupsSaved * 5), 100);
+    setProgressBarWidth(newProgress);
+    setWeeklyCups((prev) => prev + cupsSaved);
+    setMonthlyAverage((prev) => Math.floor((prev + cupsSaved) / 2));
+
+    // Trigger confetti if goal is reached
+    if (newProgress === 100 && !celebrate) {
+      console.log("Confetti Triggered!"); // Debugging line
+      setCelebrate(true); // Show confetti once
+      setTimeout(() => setCelebrate(false), 5000); // Hide confetti after 5 seconds
+    }
+
+    // Simulate new action log
+    setRecentActions((prevActions) => [
+      ...prevActions,
+      { type: actionType, location, time: 'Just Now' }
     ]);
   };
 
@@ -52,21 +69,29 @@ function ActionTracker() {
 
           <div className="grid md:grid-cols-2 gap-12">
             {/* Personal Impact Dashboard */}
-            <div className="bg-neutral-800 rounded-xl p-8 animate__animated animate__fadeInLeft  h-fit">
+            <div className="bg-neutral-800 rounded-xl p-8 animate__animated animate__fadeInLeft h-fit">
               <h3 className="text-2xl font-bold mb-6">Personal Impact Dashboard</h3>
               <div className="space-y-6">
                 <div>
                   <div className="flex justify-between mb-2">
                     <span className="text-gray-300">Weekly Goal Progress</span>
-                    <span className="text-green-500">{weeklyGoal}%</span>
+                    <span className="text-green-500">{progressBarWidth}%</span>
                   </div>
                   <div className="w-full bg-neutral-700 rounded-full h-4">
                     <div
-                      className="bg-green-500 h-4 rounded-full transition-all duration-500"
+                      className={`bg-green-500 h-4 rounded-full transition-all duration-500 ${
+                        progressBarWidth === 100 ? 'animate__animated animate__tada' : ''
+                      }`}
                       style={{ width: `${progressBarWidth}%` }}
                     ></div>
                   </div>
                 </div>
+
+                {progressBarWidth === 100 && (
+                  <div className="mt-4 text-center text-2xl text-green-400">
+                    🎉 Congratulations! You've reached your goal! 🎉
+                  </div>
+                )}
 
                 <div className="grid grid-cols-2 gap-4">
                   <div className="bg-neutral-700 rounded-lg p-4">
@@ -105,10 +130,13 @@ function ActionTracker() {
               <form id="action-log-form" className="space-y-6" onSubmit={handleLogAction}>
                 <div>
                   <label className="block text-sm font-medium text-gray-300 mb-2">Action Type</label>
-                  <select className="w-full bg-neutral-700 border-neutral-600 rounded-lg px-4 py-2 text-white focus:ring-green-500 focus:border-green-500">
-                    <option value="reusable">Used Reusable Cup</option>
-                    <option value="refused">Refused Disposable Cup</option>
-                    <option value="influenced">Influenced Others</option>
+                  <select
+                    name="actionType"
+                    className="w-full bg-neutral-700 border-neutral-600 rounded-lg px-4 py-2 text-white focus:ring-green-500 focus:border-green-500"
+                  >
+                    <option value="Used Reusable Cup">Used Reusable Cup</option>
+                    <option value="Refused Disposable Cup">Refused Disposable Cup</option>
+                    <option value="Influenced Others">Influenced Others</option>
                   </select>
                 </div>
 
@@ -116,7 +144,10 @@ function ActionTracker() {
                   <label className="block text-sm font-medium text-gray-300 mb-2">Number of Cups Saved</label>
                   <input
                     type="number"
+                    name="cupsSaved"
                     className="w-full bg-neutral-700 border-neutral-600 rounded-lg px-4 py-2 text-white focus:ring-green-500 focus:border-green-500"
+                    required
+                    min="1"
                   />
                 </div>
 
@@ -124,8 +155,10 @@ function ActionTracker() {
                   <label className="block text-sm font-medium text-gray-300 mb-2">Location</label>
                   <input
                     type="text"
+                    name="location"
                     placeholder="e.g., Campus Café"
                     className="w-full bg-neutral-700 border-neutral-600 rounded-lg px-4 py-2 text-white focus:ring-green-500 focus:border-green-500"
+                    required
                   />
                 </div>
 
@@ -139,7 +172,7 @@ function ActionTracker() {
 
               <div className="mt-8">
                 <h4 className="text-xl font-bold mb-4">Recent Actions</h4>
-                <div className="space-y-4">
+                <div className="space-y-4 overflow-y-auto max-h-40">
                   {recentActions.map((action, index) => (
                     <div key={index} className="bg-neutral-700 rounded-lg p-4">
                       <div className="flex justify-between items-start">
@@ -155,8 +188,26 @@ function ActionTracker() {
               </div>
             </div>
           </div>
+
+          
         </div>
       </section>
+      {/* Confetti Celebration */}
+      <Confetti 
+          drawShape={ctx => {
+            ctx.beginPath()
+            for(let i = 0; i < 22; i++) {
+              const angle = 0.35 * i
+              const x = (0.2 + (1.5 * angle)) * Math.cos(angle)
+              const y = (0.2 + (1.5 * angle)) * Math.sin(angle)
+              ctx.lineTo(x, y)
+            }
+            ctx.stroke()
+            ctx.closePath()
+          }}
+        
+           width={width}
+      height={height}/>
     </div>
   );
 }

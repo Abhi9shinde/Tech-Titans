@@ -15,15 +15,15 @@ function App() {
     <div>
 
       <Navbar />
-      <HeroSection/>
-       <ImpactStats/>
-       <EnvironmentalRisks/>
-      <HealthAwareness/> 
-      <SustainableAlternatives/>
-      <CommunityDashboard/>
-      <ActionTracker/>
-      <Testimonials/>
-      <Footer/>
+      <HeroSection />
+      <ImpactStats />
+      <EnvironmentalRisks />
+      <HealthAwareness />
+      <SustainableAlternatives />
+      <CommunityDashboard />
+      <ActionTracker />
+      <Testimonials />
+      <Footer />
     </div>
   )
 }

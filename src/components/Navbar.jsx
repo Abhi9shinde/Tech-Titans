@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import logo from '/logo.avif';
+import { SignInButton } from '@clerk/clerk-react';
 
 const Navbar = () => {
     const [isMenuVisible, setIsMenuVisible] = useState(false);
@@ -22,7 +23,7 @@ const Navbar = () => {
         { href: '#impact-stats', label: 'Impact' },
         { href: '#environmental-risks', label: 'Risks' },
         { href: '#health-awareness', label: 'Health' },
-        { href: '#sustainable-alternatives', label: 'Solutions' },
+        { href: '#sustainable-alternatives', label: 'Solutions'  },
         { href: '#community-dashboard', label: 'Community' },
         { href: '#get-involved', label: 'Get Involved', special: true },
     ];
@@ -46,8 +47,8 @@ const Navbar = () => {
                                 <a
                                     key={link.href}
                                     href={link.href}
-                                    className={`hover:bg-neutral-700 px-3 py-2 rounded-md text-md font-medium transition-all ${
-                                        link.special ? 'bg-green-600 hover:bg-green-700 px-4' : ''
+                                    className={`px-3 py-2 rounded-md text-md font-medium transition-all ${
+                                        link.special ? 'bg-green-600 hover:bg-green-700 px-4' : 'hover:bg-neutral-700 '
                                     }`}
                                 >
                                     {link.label}
