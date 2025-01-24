@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import logo from '/logo.avif';
-import { Link, NavLink } from 'react-router-dom'
 
 const Navbar = () => {
     const [isMenuVisible, setIsMenuVisible] = useState(false);
@@ -23,10 +22,10 @@ const Navbar = () => {
         // { href: '#impact-stats', label: 'Impact' },
         { href: '/risks', label: 'Risks' },
         { href: '/phase', label: 'Phases' },
-        // { href: '#health-awareness', label: 'Health' },
+        { href: '#health-awareness', label: 'Health' },
         { href: '#sustainable-alternatives', label: 'Solutions' },
         { href: '#community-dashboard', label: 'Community' },
-        { href: '#get-involved', label: 'Get Involved', special: true },
+        { href: '/dashboard', label: 'Get Involved', special: true },
     ];
 
     return (
@@ -36,8 +35,12 @@ const Navbar = () => {
                     {/* Logo Section */}
                     <div className="flex items-center">
                         <div className="flex-shrink-0 flex gap-2 items-center">
-                            <a href="/"><img src={logo} alt="EcoCup logo" className="w-8 h-8 rounded-full" /></a>
-                            <span className="text-xl font-bold">EcoCup</span>
+                            <a href="/">
+                                <div className="flex-shrink-0 flex gap-2 items-center">
+                                    <img src={logo} alt="EcoCup logo" className="w-8 h-8 rounded-full" />
+                                    <span className="text-xl font-bold">EcoCup</span>
+                                </div>
+                            </a>
                         </div>
                     </div>
 
