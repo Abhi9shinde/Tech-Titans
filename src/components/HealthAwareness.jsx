@@ -28,30 +28,30 @@ function HealthAwareness() {
     }, []);
 
     return (
-        <section id="health-awareness" className="py-20 bg-white">
+        <section id="health-awareness" className="py-20 bg-neutral-900 text-white border-t border-neutral-800">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Section Header */}
                 <div className="text-center mb-16 animate__animated animate__fadeIn">
-                    <h2 className="text-3xl md:text-4xl font-bold text-neutral-900 mb-4">Health Risks Awareness</h2>
-                    <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                    <h2 className="text-3xl md:text-4xl font-bold mb-4">Health Risks Awareness</h2>
+                    <p className="text-lg text-gray-300 max-w-2xl mx-auto">
                         Understanding the potential health hazards associated with regular paper cup usage.
                     </p>
                 </div>
 
                 {/* Carousel */}
                 <div className="grid lg:grid-cols-2 gap-12 items-center">
-                    <div className="bg-neutral-50 rounded-2xl p-8 shadow-lg animate__animated animate__fadeInLeft">
+                    <div className="bg-neutral-800 rounded-2xl p-8 shadow-lg animate__animated animate__fadeInLeft">
                         <div id="health-risks-carousel" className="relative">
-                            <div className="carousel-item p-6 bg-white rounded-xl shadow-sm">
+                            <div className="carousel-item p-6 bg-neutral-900 rounded-xl shadow-sm">
                                 <div className="flex items-center space-x-4 mb-4">
                                     <div className="bg-red-100 p-3 rounded-full">
                                         <svg className="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>
                                         </svg>
                                     </div>
-                                    <h3 className="text-xl font-bold text-neutral-900">{carouselItems[currentSlide].title}</h3>
+                                    <h3 className="text-xl font-bold ">{carouselItems[currentSlide].title}</h3>
                                 </div>
-                                <p className="text-gray-600">{carouselItems[currentSlide].content}</p>
+                                <p className="text-gray-400">{carouselItems[currentSlide].content}</p>
                             </div>
 
                             {/* Carousel Dots */}
@@ -59,7 +59,7 @@ function HealthAwareness() {
                                 {carouselItems.map((_, index) => (
                                     <button
                                         key={index}
-                                        className={`carousel-dot w-3 h-3 rounded-full ${index === currentSlide ? 'bg-neutral-900' : 'bg-neutral-300'}`}
+                                        className={`carousel-dot w-3 h-3 rounded-full ${index === currentSlide ? 'bg-neutral-500' : 'bg-neutral-300'}`}
                                     />
                                 ))}
                             </div>
@@ -73,18 +73,18 @@ function HealthAwareness() {
                             { title: "Endocrine Disruption", content: "BPA and similar chemicals can interfere with hormone function and endocrine system regulation.", borderColor: "border-orange-500" },
                             { title: "Reproductive Health", content: "Chemical exposure may impact reproductive health and fetal development in pregnant individuals.", borderColor: "border-yellow-500" },
                         ].map((risk, index) => (
-                            <div key={index} className={`bg-white p-6 rounded-xl shadow-lg border-l-4 ${risk.borderColor}`}>
-                                <h3 className="text-xl font-bold text-neutral-900 mb-2">{risk.title}</h3>
-                                <p className="text-gray-600">{risk.content}</p>
+                            <div key={index} className={`bg-neutral-800 p-6 rounded-xl shadow-lg border-l-4 ${risk.borderColor}`}>
+                                <h3 className="text-xl font-bold  mb-2">{risk.title}</h3>
+                                <p className="text-gray-400">{risk.content}</p>
                             </div>
                         ))}
                     </div>
                 </div>
 
                 {/* Prevention Tips */}
-                <div className="mt-16 bg-neutral-50 rounded-2xl p-8 animate__animated animate__fadeIn">
+                <div className="mt-16 bg-neutral-800 rounded-2xl p-8 animate__animated animate__fadeIn">
                     <div className="text-center mb-8">
-                        <h3 className="text-2xl font-bold text-neutral-900 mb-4">Prevention Tips</h3>
+                        <h3 className="text-2xl font-bold  mb-4">Prevention Tips</h3>
                     </div>
                     <div className="grid md:grid-cols-3 gap-6">
                         {[
@@ -92,7 +92,7 @@ function HealthAwareness() {
                             { title: "Temperature Control", content: "Avoid extremely hot beverages in disposable cups to minimize chemical leaching.", icon: "M13 10V3L4 14h7v7l9-11h-7z" },
                             { title: "Eco-Friendly Options", content: "Choose cups made from sustainable, chemical-free materials.", icon: "M12 6v6m0 0v6m0-6h6m-6 0H6" },
                         ].map((tip, index) => (
-                            <div key={index} className="bg-white p-6 rounded-xl shadow-sm">
+                            <div key={index} className="bg-neutral-900 p-6 rounded-xl shadow-sm">
                                 <div className="text-green-600 mb-4">
                                     <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d={tip.icon}></path>

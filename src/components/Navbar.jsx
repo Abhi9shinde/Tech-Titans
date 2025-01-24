@@ -20,11 +20,11 @@ const Navbar = () => {
 
     const links = [
         { href: '/', label: 'Home' },
-        { href: '#impact-stats', label: 'Impact' },
-        { href: '#environmental-risks', label: 'Risks' },
+        // { href: '#impact-stats', label: 'Impact' },
+        { href: '/risks', label: 'Risks' },
         { href: '/phase', label: 'Phases' },
-        { href: '#health-awareness', label: 'Health' },
-        { href: '#sustainable-alternatives', label: 'Solutions'  },
+        // { href: '#health-awareness', label: 'Health' },
+        { href: '#sustainable-alternatives', label: 'Solutions' },
         { href: '#community-dashboard', label: 'Community' },
         { href: '#get-involved', label: 'Get Involved', special: true },
     ];
@@ -48,9 +48,8 @@ const Navbar = () => {
                                 <a
                                     key={link.href}
                                     href={link.href}
-                                    className={`px-3 py-2 rounded-md text-md font-medium transition-all ${
-                                        link.special ? 'bg-green-600 hover:bg-green-700 px-4' : 'hover:bg-neutral-700 '
-                                    }`}
+                                    className={`px-3 py-2 rounded-md text-md font-medium transition-all ${link.special ? 'bg-green-600 hover:bg-green-700 px-4' : 'hover:bg-neutral-700 '
+                                        }`}
                                 >
                                     {link.label}
                                 </a>

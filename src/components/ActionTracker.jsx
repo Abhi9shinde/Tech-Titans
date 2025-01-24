@@ -55,7 +55,7 @@ function ActionTracker() {
   };
 
   return (
-    <div>
+    <div className='border-t border-neutral-800'>
       <section id="action-tracker" className="py-20 bg-neutral-900 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16 animate__animated animate__fadeIn">
@@ -77,9 +77,8 @@ function ActionTracker() {
                   </div>
                   <div className="w-full bg-neutral-700 rounded-full h-4">
                     <div
-                      className={`bg-green-500 h-4 rounded-full transition-all duration-500 ${
-                        progressBarWidth === 100 ? 'animate__animated animate__tada' : ''
-                      }`}
+                      className={`bg-green-500 h-4 rounded-full transition-all duration-500 ${progressBarWidth === 100 ? 'animate__animated animate__tada' : ''
+                        }`}
                       style={{ width: `${progressBarWidth}%` }}
                     ></div>
                   </div>
@@ -109,9 +108,8 @@ function ActionTracker() {
                       <div key={index} className="text-center">
                         <div className="text-xs text-gray-400 mb-1">{entry.day}</div>
                         <div
-                          className={`w-8 h-8 rounded-full flex items-center justify-center ${
-                            entry.completed ? 'bg-green-500' : 'bg-neutral-600'
-                          }`}
+                          className={`w-8 h-8 rounded-full flex items-center justify-center ${entry.completed ? 'bg-green-500' : 'bg-neutral-600'
+                            }`}
                         >
                           {entry.completed && '✓'}
                         </div>
@@ -188,22 +186,22 @@ function ActionTracker() {
           </div>
 
           {/* Confetti Celebration */}
-        {celebrate &&  <Confetti 
-          drawShape={ctx => {
-            ctx.beginPath()
-            for(let i = 0; i < 22; i++) {
-              const angle = 0.35 * i
-              const x = (0.2 + (1.5 * angle)) * Math.cos(angle)
-              const y = (0.2 + (1.5 * angle)) * Math.sin(angle)
-              ctx.lineTo(x, y)
-            }
-            ctx.stroke()
-            ctx.closePath()
-          }}
-        
-           width={width}
-      height={height}/>}
-         
+          {celebrate && <Confetti
+            drawShape={ctx => {
+              ctx.beginPath()
+              for (let i = 0; i < 22; i++) {
+                const angle = 0.35 * i
+                const x = (0.2 + (1.5 * angle)) * Math.cos(angle)
+                const y = (0.2 + (1.5 * angle)) * Math.sin(angle)
+                ctx.lineTo(x, y)
+              }
+              ctx.stroke()
+              ctx.closePath()
+            }}
+
+            width={width}
+            height={height} />}
+
         </div>
       </section>
     </div>

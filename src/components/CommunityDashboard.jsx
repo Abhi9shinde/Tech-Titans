@@ -41,12 +41,12 @@ const CommunityDashboard = () => {
         pointsEarned: prevCounters.pointsEarned + 10
       }));
     }, 3000);
-    
+
     return () => clearInterval(interval);
   }, []);
 
   return (
-    <div>
+    <div className='border-t border-neutral-800'>
       <section id="community-dashboard" className="py-20 bg-neutral-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16 animate__animated animate__fadeIn">

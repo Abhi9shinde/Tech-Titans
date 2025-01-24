@@ -1,12 +1,12 @@
 import React from 'react';
 
 function SustainableAlternatives() {
-  
 
-  
+
+
 
   return (
-    <div>
+    <div className='border-t border-neutral-800'>
       <section id="sustainable-alternatives" className="py-20 bg-neutral-900 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16 animate__animated animate__fadeIn">
@@ -57,7 +57,7 @@ function SustainableAlternatives() {
             ))}
           </div>
 
-         
+
         </div>
       </section>
     </div>
