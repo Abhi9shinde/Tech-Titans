@@ -1,8 +1,8 @@
 import React from 'react'
-
+import { Link } from 'react-router-dom'
 function EnvironmentalRisks() {
     return (
-        <div>
+        <div className='border-t border-neutral-800'>
             <section id="environmental-risks" class="py-20 bg-neutral-900 text-white">
                 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div class="text-center mb-16 animate__animated animate__fadeIn">
@@ -40,45 +40,15 @@ function EnvironmentalRisks() {
                             <h3 class="text-xl font-bold mb-4">Carbon Footprint</h3>
                             <p class="text-gray-400">Manufacturing and transportation of paper cups contribute significantly to greenhouse gas emissions.</p>
                         </div>
-
-                        <div class="bg-neutral-800 rounded-xl p-6 hover:transform hover:scale-105 transition-all duration-300 animate__animated animate__fadeInUp" style={{ "animation-delay": "0.6s" }}>
-                            <div class="bg-green-500/10 rounded-full w-14 h-14 flex items-center justify-center mb-6">
-                                <svg class="w-8 h-8 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-                                </svg>
-                            </div>
-                            <h3 class="text-xl font-bold mb-4">Energy Consumption</h3>
-                            <p class="text-gray-400">The production process requires extensive energy usage, depleting natural resources and increasing pollution.</p>
-                        </div>
-
-                        <div class="bg-neutral-800 rounded-xl p-6 hover:transform hover:scale-105 transition-all duration-300 animate__animated animate__fadeInUp" style={{ "animation-delay": "0.8s" }}>
-                            <div class="bg-purple-500/10 rounded-full w-14 h-14 flex items-center justify-center mb-6">
-                                <svg class="w-8 h-8 text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path>
-                                </svg>
-                            </div>
-                            <h3 class="text-xl font-bold mb-4">Water Pollution</h3>
-                            <p class="text-gray-400">Chemical treatments and coating processes contaminate water sources, affecting aquatic ecosystems.</p>
-                        </div>
-
-                        <div class="bg-neutral-800 rounded-xl p-6 hover:transform hover:scale-105 transition-all duration-300 animate__animated animate__fadeInUp" style={{ "animation-delay": "1s" }}>
-                            <div class="bg-teal-500/10 rounded-full w-14 h-14 flex items-center justify-center mb-6">
-                                <svg class="w-8 h-8 text-teal-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
-                                </svg>
-                            </div>
-                            <h3 class="text-xl font-bold mb-4">Landfill Impact</h3>
-                            <p class="text-gray-400">Non-biodegradable components in paper cups contribute to growing landfill crisis and soil contamination.</p>
-                        </div>
                     </div>
 
                     <div class="mt-16 text-center">
-                        <a href="#sustainable-alternatives" class="inline-flex items-center px-6 py-3 bg-green-600 hover:bg-green-700 rounded-full text-white font-medium transition-all transform hover:scale-105 animate__animated animate__fadeIn">
-                            Explore Sustainable Alternatives
+                        <Link to="/risks" class="inline-flex items-center px-6 py-3 bg-green-600 hover:bg-green-700 rounded-full text-white font-medium transition-all transform hover:scale-105 animate__animated animate__fadeIn">
+                            Explore More Environmental Risks
                             <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
                             </svg>
-                        </a>
+                        </Link>
                     </div>
                 </div>
             </section>

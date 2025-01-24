@@ -4,6 +4,9 @@ import Home from './pages/Home';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Phases from './pages/Phases';
+
+import Risk from './pages/Risk';
+
 import Dashboard from './pages/Dashboard';
 
 function App() {
@@ -14,12 +17,16 @@ function App() {
 
   return (
     <div>
+      <Router>
+        <Navbar />
+
       {!hideLayout && <Navbar />}
       
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/phase" element={<Phases />} />
         <Route path="/dashboard/*" element={<Dashboard />} />
+           <Route path="/risks" element={<Risk />}></Route>
       </Routes>
 
       {!hideLayout && <Footer />}

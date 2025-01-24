@@ -15,10 +15,10 @@ function Home() {
             <HeroSection />
             <ImpactStats />
             <EnvironmentalRisks />
+            <ActionTracker />
             <HealthAwareness />
             <SustainableAlternatives />
             <CommunityDashboard />
-            <ActionTracker />
             {/* <Testimonials /> */}
         </div>
     )

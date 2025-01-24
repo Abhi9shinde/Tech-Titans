@@ -19,8 +19,8 @@ const Navbar = () => {
 
     const links = [
         { href: '/', label: 'Home' },
-        { href: '#impact-stats', label: 'Impact' },
-        { href: '#environmental-risks', label: 'Risks' },
+        // { href: '#impact-stats', label: 'Impact' },
+        { href: '/risks', label: 'Risks' },
         { href: '/phase', label: 'Phases' },
         { href: '#health-awareness', label: 'Health' },
         { href: '#sustainable-alternatives', label: 'Solutions' },
