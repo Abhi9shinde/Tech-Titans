@@ -35,12 +35,12 @@ function Testimonials() {
           <div className="relative">
             <div className="overflow-hidden relative">
               <div
-                className="flex transition-transform duration-500"
+                className="flex transition-transform duration-500 ease-in-out"
                 style={{ transform: `translateX(-${(currentSlide - 1) * 100}%)` }}
               >
                 {/* Testimonial 1 */}
                 <div className="w-full flex-shrink-0 px-4">
-                  <div className="bg-neutral-50 rounded-xl p-8 shadow-lg animate__animated animate__fadeIn">
+                  <div className="bg-neutral-800 rounded-xl p-8 shadow-lg animate__animated animate__fadeIn">
                     <div className="flex flex-col md:flex-row items-center md:items-start gap-6">
                       <div className="flex-shrink-0">
                         <div className="w-20 h-20 rounded-full bg-green-100 flex items-center justify-center">
@@ -60,7 +60,7 @@ function Testimonials() {
                         </div>
                       </div>
                       <div className="flex-1">
-                        <p className="text-gray-600 italic mb-4">
+                        <p className="text-gray-200 italic mb-4">
                           "Switching to reusable cups was easier than I thought. The app's tracking feature helps me see my environmental impact, and it's incredibly motivating!"
                         </p>
                         <div>
@@ -74,7 +74,7 @@ function Testimonials() {
 
                 {/* Testimonial 2 */}
                 <div className="w-full flex-shrink-0 px-4">
-                  <div className="bg-neutral-50 rounded-xl p-8 shadow-lg animate__animated animate__fadeIn">
+                  <div className="bg-neutral-800 rounded-xl p-8 shadow-lg animate__animated animate__fadeIn">
                     <div className="flex flex-col md:flex-row items-center md:items-start gap-6">
                       <div className="flex-shrink-0">
                         <div className="w-20 h-20 rounded-full bg-blue-100 flex items-center justify-center">
@@ -94,7 +94,7 @@ function Testimonials() {
                         </div>
                       </div>
                       <div className="flex-1">
-                        <p className="text-gray-600 italic mb-4">
+                        <p className="text-gray-200 italic mb-4">
                           "As a café owner, implementing the smart cup program has not only reduced our waste but also attracted environmentally conscious customers."
                         </p>
                         <div>
@@ -108,7 +108,7 @@ function Testimonials() {
 
                 {/* Testimonial 3 */}
                 <div className="w-full flex-shrink-0 px-4">
-                  <div className="bg-neutral-50 rounded-xl p-8 shadow-lg animate__animated animate__fadeIn">
+                  <div className="bg-neutral-800 rounded-xl p-8 shadow-lg animate__animated animate__fadeIn">
                     <div className="flex flex-col md:flex-row items-center md:items-start gap-6">
                       <div className="flex-shrink-0">
                         <div className="w-20 h-20 rounded-full bg-purple-100 flex items-center justify-center">
@@ -128,7 +128,7 @@ function Testimonials() {
                         </div>
                       </div>
                       <div className="flex-1">
-                        <p className="text-gray-600 italic mb-4">
+                        <p className="text-gray-200 italic mb-4">
                           "The gamification aspect makes sustainability fun! Competing with friends to reduce cup waste has become our daily challenge."
                         </p>
                         <div>
@@ -142,6 +142,7 @@ function Testimonials() {
               </div>
             </div>
 
+            {/* Navigation buttons */}
             <button
               className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-white p-2 rounded-full shadow-lg hover:bg-gray-100 focus:outline-none"
               onClick={() => updateSlide('prev')}
@@ -170,6 +171,7 @@ function Testimonials() {
               </svg>
             </button>
 
+            {/* Dots for slide navigation */}
             <div className="flex justify-center mt-8 space-x-2">
               {[1, 2, 3].map((index) => (
                 <button

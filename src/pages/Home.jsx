@@ -4,8 +4,7 @@ import ImpactStats from '../components/ImpactStats'
 import EnvironmentalRisks from '../components/EnvironmentalRisks'
 import HealthAwareness from '../components/HealthAwareness'
 import SustainableAlternatives from '../components/SustainableAlternatives'
-// import Testimonials from '../components/Testimonials'
-import CommunityDashboard from '../components/CommunityDashboard'
+import Testimonials from '../components/Testimonials'
 import ActionTracker from '../components/ActionTracker'
 
 
@@ -18,8 +17,8 @@ function Home() {
             <ActionTracker />
             <HealthAwareness />
             <SustainableAlternatives />
-            <CommunityDashboard />
-            {/* <Testimonials /> */}
+            {/* <CommunityDashboard /> */}
+            <Testimonials />
         </div>
     )
 }

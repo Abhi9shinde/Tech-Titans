@@ -24,7 +24,7 @@ const Navbar = () => {
         { href: '/phase', label: 'Phases' },
         { href: '#health-awareness', label: 'Health' },
         { href: '#sustainable-alternatives', label: 'Solutions' },
-        { href: '#community-dashboard', label: 'Community' },
+        { href: '/community', label: 'Community' },
         { href: '/dashboard', label: 'Get Involved', special: true },
     ];
 
