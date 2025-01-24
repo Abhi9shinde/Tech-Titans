@@ -16,13 +16,13 @@ function App() {
 
       <Navbar />
       <HeroSection/>
-      {/* <ImpactStats/>
-      <EnvironmentalRisks/>
-      <HealthAwareness/> */}
-      {/* <SustainableAlternatives/> */}
-      {/* <CommunityDashboard/> */}
-      {/* <ActionTracker/> */}
-      {/* <Testimonials/> */}
+       <ImpactStats/>
+       <EnvironmentalRisks/>
+      <HealthAwareness/> 
+      <SustainableAlternatives/>
+      <CommunityDashboard/>
+      <ActionTracker/>
+      <Testimonials/>
       <Footer/>
     </div>
   )

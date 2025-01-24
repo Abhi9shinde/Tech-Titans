@@ -3,11 +3,11 @@ import React from 'react'
 function Testimonials() {
   return (
     <div>
-      <section id="testimonials" class="py-20 bg-white">
+      <section id="testimonials" class="py-20 bg-neutral-900">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16 animate__animated animate__fadeIn">
-                <h2 class="text-3xl md:text-4xl font-bold text-neutral-900 mb-4">Community Voices</h2>
-                <p class="text-lg text-gray-600 max-w-2xl mx-auto">Hear from members who are making a difference in our sustainable journey.</p>
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Community Voices</h2>
+                <p class="text-lg text-gray-300 max-w-2xl mx-auto">Hear from members who are making a difference in our sustainable journey.</p>
             </div>
 
             <div class="relative" x-data="{ activeSlide: 1 }">

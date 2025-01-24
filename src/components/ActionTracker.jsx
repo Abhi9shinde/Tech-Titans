@@ -2,56 +2,56 @@ import React from 'react'
 
 function ActionTracker() {
     // Populate weekly tracker
-function populateWeeklyTracker() {
-    const weeklyTracker = document.getElementById('weekly-tracker');
-    const days = ['M', 'T', 'W', 'T', 'F', 'S', 'S'];
+// function populateWeeklyTracker() {
+//     const weeklyTracker = document.getElementById('weekly-tracker');
+//     const days = ['M', 'T', 'W', 'T', 'F', 'S', 'S'];
     
-    weeklyTracker.innerHTML = days.map((day, index) => `
-        <div class="text-center">
-            <div class="text-xs text-gray-400 mb-1">${day}</div>
-            <div class="w-8 h-8 rounded-full flex items-center justify-center ${index < 5 ? 'bg-green-500' : 'bg-neutral-600'}">${index < 5 ? '✓' : ''}</div>
-        </div>
-    `).join('');
-}
+//     weeklyTracker.innerHTML = days.map((day, index) => `
+//         <div class="text-center">
+//             <div class="text-xs text-gray-400 mb-1">${day}</div>
+//             <div class="w-8 h-8 rounded-full flex items-center justify-center ${index < 5 ? 'bg-green-500' : 'bg-neutral-600'}">${index < 5 ? '✓' : ''}</div>
+//         </div>
+//     `).join('');
+// }
 
-// Populate recent actions
-function populateRecentActions() {
-    const recentActions = document.getElementById('recent-actions');
-    const actions = [
-        { type: 'Used Reusable Cup', location: 'Campus Café', time: '2 hours ago' },
-        { type: 'Influenced Others', location: 'Student Center', time: '5 hours ago' },
-        { type: 'Refused Disposable Cup', location: 'Library Café', time: '1 day ago' }
-    ];
+// // Populate recent actions
+// function populateRecentActions() {
+//     const recentActions = document.getElementById('recent-actions');
+//     const actions = [
+//         { type: 'Used Reusable Cup', location: 'Campus Café', time: '2 hours ago' },
+//         { type: 'Influenced Others', location: 'Student Center', time: '5 hours ago' },
+//         { type: 'Refused Disposable Cup', location: 'Library Café', time: '1 day ago' }
+//     ];
 
-    recentActions.innerHTML = actions.map(action => `
-        <div class="bg-neutral-700 rounded-lg p-4">
-            <div class="flex justify-between items-start">
-                <div>
-                    <h5 class="font-medium">${action.type}</h5>
-                    <p class="text-sm text-gray-400">${action.location}</p>
-                </div>
-                <span class="text-xs text-gray-400">${action.time}</span>
-            </div>
-        </div>
-    `).join('');
-}
+//     recentActions.innerHTML = actions.map(action => `
+//         <div class="bg-neutral-700 rounded-lg p-4">
+//             <div class="flex justify-between items-start">
+//                 <div>
+//                     <h5 class="font-medium">${action.type}</h5>
+//                     <p class="text-sm text-gray-400">${action.location}</p>
+//                 </div>
+//                 <span class="text-xs text-gray-400">${action.time}</span>
+//             </div>
+//         </div>
+//     `).join('');
+// }
 
-// Form submission handler
-document.getElementById('action-log-form').addEventListener('submit', function(e) {
-    e.preventDefault();
-    // Add animation to progress bar
-    const progressBar = document.getElementById('goal-progress-bar');
-    const currentWidth = parseInt(progressBar.style.width);
-    const newWidth = Math.min(currentWidth + 5, 100);
-    progressBar.style.width = `${newWidth}%`;
-    document.getElementById('goal-percentage').textContent = `${newWidth}%`;
-});
+// // Form submission handler
+// document.getElementById('action-log-form').addEventListener('submit', function(e) {
+//     e.preventDefault();
+//     // Add animation to progress bar
+//     const progressBar = document.getElementById('goal-progress-bar');
+//     const currentWidth = parseInt(progressBar.style.width);
+//     const newWidth = Math.min(currentWidth + 5, 100);
+//     progressBar.style.width = `${newWidth}%`;
+//     document.getElementById('goal-percentage').textContent = `${newWidth}%`;
+// });
 
-// Initialize on page load
-document.addEventListener('DOMContentLoaded', () => {
-    populateWeeklyTracker();
-    populateRecentActions();
-});
+// // Initialize on page load
+// document.addEventListener('DOMContentLoaded', () => {
+//     populateWeeklyTracker();
+//     populateRecentActions();
+// });
   return (
     <div>
        <section id="action-tracker" class="py-20 bg-neutral-900 text-white">
@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
                                 <span class="text-green-500" id="goal-percentage">75%</span>
                             </div>
                             <div class="w-full bg-neutral-700 rounded-full h-4">
-                                <div class="bg-green-500 h-4 rounded-full transition-all duration-500" style="width: 75%" id="goal-progress-bar"></div>
+                                <div class="bg-green-500 h-4 rounded-full transition-all duration-500 w-3/4"  id="goal-progress-bar"></div>
                             </div>
                         </div>
 

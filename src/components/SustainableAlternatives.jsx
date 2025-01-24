@@ -1,16 +1,16 @@
 import React from 'react'
 
 function SustainableAlternatives() {
-    const usageSlider = document.getElementById('usage-slider');
-        const treesSaved = document.getElementById('trees-saved');
-        const plasticReduced = document.getElementById('plastic-reduced');
+    // const usageSlider = document.getElementById('usage-slider');
+    //     const treesSaved = document.getElementById('trees-saved');
+    //     const plasticReduced = document.getElementById('plastic-reduced');
 
-        usageSlider.addEventListener('input', function() {
-            const dailyUse = parseInt(this.value);
-            const annualUse = dailyUse * 365;
-            treesSaved.textContent = Math.round(annualUse * 0.033);
-            plasticReduced.textContent = annualUse;
-        });
+    //     usageSlider.addEventListener('input', function() {
+    //         const dailyUse = parseInt(this.value);
+    //         const annualUse = dailyUse * 365;
+    //         treesSaved.textContent = Math.round(annualUse * 0.033);
+    //         plasticReduced.textContent = annualUse;
+        // });
   return (
     <div>
       <section id="sustainable-alternatives" class="py-20 bg-neutral-900 text-white">
@@ -51,7 +51,7 @@ function SustainableAlternatives() {
                     </ul>
                 </div>
 
-                <div class="bg-neutral-800 rounded-xl p-8 transform hover:scale-105 transition-all duration-300 animate__animated animate__fadeInUp" style="animation-delay: 0.2s">
+                <div class="bg-neutral-800 rounded-xl p-8 transform hover:scale-105 transition-all duration-300 animate__animated animate__fadeInUp" style={{"animation-delay": "0.2s"}}>
                     <div class="bg-blue-500/10 w-16 h-16 rounded-full flex items-center justify-center mb-6">
                         <svg class="w-8 h-8 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064"></path>
@@ -81,7 +81,7 @@ function SustainableAlternatives() {
                     </ul>
                 </div>
 
-                <div class="bg-neutral-800 rounded-xl p-8 transform hover:scale-105 transition-all duration-300 animate__animated animate__fadeInUp" style="animation-delay: 0.4s">
+                <div class="bg-neutral-800 rounded-xl p-8 transform hover:scale-105 transition-all duration-300 animate__animated animate__fadeInUp" style={{"animation-delay": "0.4s"}}>
                     <div class="bg-purple-500/10 w-16 h-16 rounded-full flex items-center justify-center mb-6">
                         <svg class="w-8 h-8 text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path>
