@@ -1,8 +1,8 @@
 #   EcoCup
-### Tech-Driven Solutions to Address the Dual Threat of Paper Cups – Environmental Problems (Microplastic and Single-Use Plastic Pollution) and Health Risks
+#### Tech-Driven Solutions to Address the Dual Threat of Paper Cups – Environmental Problems (Microplastic and Single-Use Plastic Pollution) and Health Risks
 
 # Challenge Overview
-### EcoCup is a project aimed at tackling the dual threat posed by paper cups, focusing on both environmental problems—such as microplastic and single-use plastic pollution—and health risks. Through tech-driven solutions, EcoCup fosters innovation by developing educational tools, promoting sustainable alternatives, and inspiring behavioral change within communities.
+#### EcoCup is a project aimed at tackling the dual threat posed by paper cups, focusing on both environmental problems—such as microplastic and single-use plastic pollution—and health risks. Through tech-driven solutions, EcoCup fosters innovation by developing educational tools, promoting sustainable alternatives, and inspiring behavioral change within communities.
 ### The project’s goal is to raise awareness about the harmful effects of paper cup consumption and provide users with actionable insights for making more sustainable choices.
 
 
