@@ -1,20 +1,26 @@
 #   EcoCup
+### Tech-Driven Solutions to Address the Dual Threat of Paper Cups – Environmental Problems (Microplastic and Single-Use Plastic Pollution) and Health Risks
+
+# Challenge Overview
+### EcoCup is a project aimed at tackling the dual threat posed by paper cups, focusing on both environmental problems—such as microplastic and single-use plastic pollution—and health risks. Through tech-driven solutions, EcoCup fosters innovation by developing educational tools, promoting sustainable alternatives, and inspiring behavioral change within communities.
+### The project’s goal is to raise awareness about the harmful effects of paper cup consumption and provide users with actionable insights for making more sustainable choices.
+
 
 ## Screenshots
 
 **Here's a glimpse of the EcoCup Rethink website in action:**
 
-| Screenshot 1 | Screenshot 2 | Screenshot 3 |
+| Home Page | Home Page 2 | Home Page 3 |
 |---|---|---|
 | <img src="public/screenshot (1).png" alt="Screenshot 1" width="400"> | <img src="public/screenshot (2).png" alt="Screenshot 2" width="400"> | <img src="public/screenshot (3).png" alt="Screenshot 3" width="400"> | 
 
-| Screenshot 4 | Screenshot 5 | Screenshot 6 |
+| Phases Page | SignUp Page | Dashboard-Overview |
 |---|---|---|
 | <img src="public/screenshot (4).png" alt="Screenshot (4)" width="400"> | <img src="public/screenshot (5).png" alt="Screenshot 5" width="400"> | <img src="public/screenshot (6).png" alt="Screenshot 6" width="400"> |
 
-| Screenshot 7 | Screenshot 8 | Screenshot 9 |
+| Dashboard-LeaderBoard | Solution Page | Solution Page |
 |---|---|---|
-| <img src="public/screenshot (7).png" alt="Screenshot (7)" width="400"> | <img src="public/screenshot (8).png" alt="Screenshot 8" width="400"> | <img src="public/screenshot (9).png" alt="Screenshot 9" width="400"> |**Introduction**
+| <img src="public/screenshot (7).png" alt="Screenshot (7)" width="400"> | <img src="public/screenshot (9).png" alt="Screenshot 8" width="400"> | <img src="public/screenshot (8).png" alt="Screenshot 9" width="400"> |**Introduction**
 
 
 ## Installation
@@ -99,3 +105,6 @@ This document outlines the lifecycle of a disposable paper cup and its associate
     * Shared cup program with smart tracking and rewards for sustainable choices.
     * Foster community engagement and incentivize sustainable behavior.
     * Reward points system, community achievements, and impact tracking.
+ 
+# License
+## This project is licensed under the MIT License – see the LICENSE file for details.
