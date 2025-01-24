@@ -27,10 +27,10 @@ const Leaderboard = () => {
   return (
     <div className='w-full'>
       <section id="leaderboard" className="p-6 w-full">
-        <div className="bg-white rounded-lg border border-neutral-200/30">
+        <div className="bg-neutral-800 rounded-lg border border-neutral-200/30">
           <div className="p-6">
             <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4 mb-6">
-              <h2 className="text-xl font-semibold text-neutral-800">Sustainability Champions</h2>
+              <h2 className="text-xl font-semibold text-white">Sustainability Champions</h2>
               <div className="flex flex-wrap gap-2">
                 <button className="px-4 py-2 text-sm bg-emerald-50 text-emerald-700 rounded-lg hover:bg-emerald-100 transition-colors">
                   This Week
@@ -54,29 +54,29 @@ const Leaderboard = () => {
               <table className="w-full">
                 <thead>
                   <tr className="border-b border-neutral-200/30">
-                    <th className="px-4 py-3 text-left text-sm font-medium text-neutral-600">Rank</th>
-                    <th className="px-4 py-3 text-left text-sm font-medium text-neutral-600">User</th>
-                    <th className="px-4 py-3 text-left text-sm font-medium text-neutral-600">Cups Saved</th>
-                    <th className="px-4 py-3 text-left text-sm font-medium text-neutral-600">CO2 Reduced</th>
-                    <th className="px-4 py-3 text-left text-sm font-medium text-neutral-600">Achievements</th>
-                    <th className="px-4 py-3 text-left text-sm font-medium text-neutral-600">Status</th>
+                    <th className="px-4 py-3 text-left text-sm font-medium text-neutral-400">Rank</th>
+                    <th className="px-4 py-3 text-left text-sm font-medium text-neutral-400">User</th>
+                    <th className="px-4 py-3 text-left text-sm font-medium text-neutral-400">Cups Saved</th>
+                    <th className="px-4 py-3 text-left text-sm font-medium text-neutral-400">CO2 Reduced</th>
+                    <th className="px-4 py-3 text-left text-sm font-medium text-neutral-400">Achievements</th>
+                    <th className="px-4 py-3 text-left text-sm font-medium text-neutral-400">Status</th>
                   </tr>
                 </thead>
                 <tbody>
                   {leaderboardData.map((user, index) => (
                     <tr key={index} className="border-b border-neutral-200/30">
-                      <td className="px-4 py-4 text-sm text-neutral-600">{`#${user.rank}`}</td>
+                      <td className="px-4 py-4 text-sm text-neutral-300">{`#${user.rank}`}</td>
                       <td className="px-4 py-4">
                         <div className="flex items-center">
                           <div className="w-8 h-8 bg-neutral-200 rounded-full mr-3"></div>
                           <div>
-                            <p className="text-sm font-medium text-neutral-800">{user.name}</p>
-                            <p className="text-xs text-neutral-500">{user.department}</p>
+                            <p className="text-sm font-medium text-neutral-300">{user.name}</p>
+                            <p className="text-xs text-neutral-300">{user.department}</p>
                           </div>
                         </div>
                       </td>
-                      <td className="px-4 py-4 text-sm text-neutral-600">{user.cupsSaved}</td>
-                      <td className="px-4 py-4 text-sm text-neutral-600">{user.co2Reduced}</td>
+                      <td className="px-4 py-4 text-sm text-neutral-300">{user.cupsSaved}</td>
+                      <td className="px-4 py-4 text-sm text-neutral-300">{user.co2Reduced}</td>
                       <td className="px-4 py-4">
                         <div className="flex flex-wrap gap-1">
                           {user.achievements.map((achievement, index) => (

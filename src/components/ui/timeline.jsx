@@ -26,14 +26,14 @@ export const Timeline = ({
 
     return (
         (<div
-            className="w-full dark:bg-neutral-950 font-sans md:px-10 bg-[#FFF6DA]"
+            className="w-full dark:bg-neutral-950 font-sans md:px-10 bg-neutral-900"
             ref={containerRef}>
             <div className="max-w-7xl mx-auto py-20 px-4 md:px-8 lg:px-10 ">
-                <h2 className="text-2xl md:text-5xl mb-4 text-black dark:text-white max-w-4xl font-bold pt-30 ">
+                <h2 className="text-2xl md:text-5xl mb-4 text-white dark:text-white max-w-4xl font-bold pt-30 ">
                     <span className="text-green-500">Environmental Impact</span> of Disposable Paper Cups: A Lifecycle Overview
                 </h2>
                 <p
-                    className="text-neutral-700 dark:text-neutral-300 text-sm md:text-base max-w-sm ">
+                    className="text-gray-400 dark:text-neutral-300 text-sm md:text-base max-w-sm ">
                     An in-depth look at the environmental effects of paper cups, from raw material extraction to disposal.
                 </p>
             </div>
