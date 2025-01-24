@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import logo from '/logo.avif';
-import { Link, NavLink } from 'react-router-dom'
 
 const Navbar = () => {
     const [isMenuVisible, setIsMenuVisible] = useState(false);
@@ -24,9 +23,9 @@ const Navbar = () => {
         { href: '#environmental-risks', label: 'Risks' },
         { href: '/phase', label: 'Phases' },
         { href: '#health-awareness', label: 'Health' },
-        { href: '#sustainable-alternatives', label: 'Solutions'  },
+        { href: '#sustainable-alternatives', label: 'Solutions' },
         { href: '#community-dashboard', label: 'Community' },
-        { href: '#get-involved', label: 'Get Involved', special: true },
+        { href: '/dashboard', label: 'Get Involved', special: true },
     ];
 
     return (
@@ -36,8 +35,12 @@ const Navbar = () => {
                     {/* Logo Section */}
                     <div className="flex items-center">
                         <div className="flex-shrink-0 flex gap-2 items-center">
-                            <a href="/"><img src={logo} alt="EcoCup logo" className="w-8 h-8 rounded-full" /></a>
-                            <span className="text-xl font-bold">EcoCup</span>
+                            <a href="/">
+                                <div className="flex-shrink-0 flex gap-2 items-center">
+                                    <img src={logo} alt="EcoCup logo" className="w-8 h-8 rounded-full" />
+                                    <span className="text-xl font-bold">EcoCup</span>
+                                </div>
+                            </a>
                         </div>
                     </div>
 
@@ -48,9 +51,8 @@ const Navbar = () => {
                                 <a
                                     key={link.href}
                                     href={link.href}
-                                    className={`px-3 py-2 rounded-md text-md font-medium transition-all ${
-                                        link.special ? 'bg-green-600 hover:bg-green-700 px-4' : 'hover:bg-neutral-700 '
-                                    }`}
+                                    className={`px-3 py-2 rounded-md text-md font-medium transition-all ${link.special ? 'bg-green-600 hover:bg-green-700 px-4' : 'hover:bg-neutral-700 '
+                                        }`}
                                 >
                                     {link.label}
                                 </a>
