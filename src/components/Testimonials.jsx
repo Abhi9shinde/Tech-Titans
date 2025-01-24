@@ -64,7 +64,7 @@ function Testimonials() {
                           "Switching to reusable cups was easier than I thought. The app's tracking feature helps me see my environmental impact, and it's incredibly motivating!"
                         </p>
                         <div>
-                          <h4 className="font-bold text-neutral-900">Sarah Chen</h4>
+                          <h4 className="font-bold text-neutral-400">Sarah Chen</h4>
                           <p className="text-gray-500">Environmental Science Student</p>
                         </div>
                       </div>
@@ -98,7 +98,7 @@ function Testimonials() {
                           "As a café owner, implementing the smart cup program has not only reduced our waste but also attracted environmentally conscious customers."
                         </p>
                         <div>
-                          <h4 className="font-bold text-neutral-900">Michael Rodriguez</h4>
+                          <h4 className="font-bold text-neutral-400">Michael Rodriguez</h4>
                           <p className="text-gray-500">Local Café Owner</p>
                         </div>
                       </div>
@@ -132,7 +132,7 @@ function Testimonials() {
                           "The gamification aspect makes sustainability fun! Competing with friends to reduce cup waste has become our daily challenge."
                         </p>
                         <div>
-                          <h4 className="font-bold text-neutral-900">Emma Thompson</h4>
+                          <h4 className="font-bold text-neutral-400">Emma Thompson</h4>
                           <p className="text-gray-500">Community Leader</p>
                         </div>
                       </div>
