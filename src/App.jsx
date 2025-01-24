@@ -9,6 +9,7 @@ import Dashboard from './pages/Dashboard';
 import SignIn from './pages/SignIn';
 import SignUp from './pages/SignUp';
 import CommunityDashboard from './components/CommunityDashboard';
+import SustainableAlternatives from './components/SustainableAlternatives';
 
 function App() {
   const location = useLocation();
@@ -24,6 +25,7 @@ function App() {
         <Route path="/phase" element={<Phases />} />
         <Route path="/signin" element={<SignIn />} />
         <Route path="/community" element={<CommunityDashboard />} />
+        <Route path="/solutions" element={<SustainableAlternatives />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/dashboard/*" element={<Dashboard />} />
         <Route path="/risks" element={<Risk />} />

@@ -3,8 +3,6 @@ import React from 'react';
 function SustainableAlternatives() {
 
 
-
-
   return (
     <div className='border-t border-neutral-800'>
       <section id="sustainable-alternatives" className="py-20 bg-neutral-900 text-white">

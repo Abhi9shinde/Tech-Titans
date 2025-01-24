@@ -15,14 +15,14 @@ function Overview() {
             </div>
             <div className="grid grid-cols-2 gap-4">
               {[
-                { label: 'Cups Saved', value: '2,547' },
-                { label: 'CO2 Reduced', value: '127kg' },
-                { label: 'Active Users', value: '342' },
-                { label: 'Challenges Won', value: '15' },
+                { label: 'Cups Saved', value: '135' },
+                { label: 'CO2 Reduced', value: '12kg' },
+                { label: 'trees Saved', value: '78' },
+                { label: 'Challenges Won', value: '4' },
               ].map((item, index) => (
                 <div key={index}>
                   <p className="text-sm text-neutral-300">{item.label}</p>
-                  <p className="text-2xl font-bold text-white">{item.value}</p>
+                  <p className="text-2xl font-bold text-white">{item.value}+</p>
                 </div>
               ))}
             </div>
@@ -87,7 +87,7 @@ function Overview() {
 
           <div className="md:col-span-2 lg:col-span-2 bg-neutral-800 p-6 rounded-lg ">
             <h3 className="text-lg font-semibold text-white mb-4">Weekly Usage Statistics</h3>
-            <div className="h-64 flex items-end justify-between space-x-2">
+            <div className="h-64 flex items-end justify-between space-x-2 overflow-hidden">
               {[
                 { day: 'Mon', height: '60%' },
                 { day: 'Tue', height: '80%' },
@@ -98,9 +98,7 @@ function Overview() {
                 { day: 'Sun', height: '30%' },
               ].map((day, index) => (
                 <div key={index} className="flex-1 flex flex-col items-center justify-end h-full">
-                  {/* Use inline style for dynamic height */}
                   <div className="bg-emerald-400 rounded-t-lg w-20" style={{ height: day.height }}></div>
-                  {/* Optionally, you can show the day label */}
                   <span className="text-sm text-neutral-400 mt-2">{day.day}</span>
                 </div>
               ))}
@@ -109,24 +107,30 @@ function Overview() {
 
 
           {/* Environmental Impact */}
-          <div className="lg:col-span-1 bg-neutral-800 p-6 rounded-lg ">
-            <h3 className="text-lg font-semibold text-white mb-4">Environmental Impact</h3>
-            {[
-              { label: 'Trees Saved', value: '1.2', width: '65%', color: 'green' },
-              { label: 'Water Saved (L)', value: '547', width: '75%', color: 'blue' },
-              { label: 'Plastic Reduced (kg)', value: '28.5', width: '45%', color: 'purple' },
-            ].map((impact, index) => (
-              <div key={index} className="mb-4">
-                <div className="flex justify-between mb-2">
-                  <span className="text-sm text-neutral-400">{impact.label}</span>
-                  <span className="text-sm font-medium text-neutral-400">{impact.value}</span>
-                </div>
-                <div className="w-full bg-neutral-100 rounded-full h-2">
-                  <div className={`bg-${impact.color}-500 h-2 rounded-full`} style={{ width: impact.width }}></div>
-                </div>
-              </div>
-            ))}
-          </div>
+          <div className="lg:col-span-1 bg-neutral-800 p-6 rounded-lg">
+  <h3 className="text-lg font-semibold text-white mb-4">Environmental Impact</h3>
+  
+  {[ 
+    { label: 'Trees Saved', value: '120', width: '65%', color: 'green' },
+    { label: 'Water Saved (L)', value: '42', width: '75%', color: 'blue' },
+    { label: 'Plastic Reduced (kg)', value: '28.5', width: '45%', color: 'purple' }
+  ].map((impact, index) => (
+    <div key={index} className="mb-4">
+      {/* Label and Value Section */}
+      <div className="flex justify-between mb-2">
+        <span className="text-sm text-neutral-400">{impact.label}</span>
+        <span className="text-sm font-medium text-neutral-400">{impact.value}</span>
+      </div>
+      
+      {/* Progress Bar Section */}
+      <div className="w-full bg-neutral-100 rounded-full h-2">
+        {/* Dynamic Progress Bar */}
+        <div className={`bg-green-400 h-2 rounded-full`} style={{ width: impact.width }}></div>
+      </div>
+    </div>
+  ))}
+</div>
+
         </div>
       </section>
     </div>

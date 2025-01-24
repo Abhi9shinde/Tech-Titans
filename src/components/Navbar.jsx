@@ -22,10 +22,10 @@ const Navbar = () => {
         // { href: '#impact-stats', label: 'Impact' },
         { href: '/risks', label: 'Risks' },
         { href: '/phase', label: 'Phases' },
-        { href: '#health-awareness', label: 'Health' },
-        { href: '#sustainable-alternatives', label: 'Solutions' },
+        // { href: '#health-awareness', label: 'Health' },
+        { href: '/solutions', label: 'Solutions' },
         { href: '/community', label: 'Community' },
-        { href: '/dashboard', label: 'Get Involved', special: true },
+        { href: '/signup', label: 'Get Involved', special: true },
     ];
 
     return (
