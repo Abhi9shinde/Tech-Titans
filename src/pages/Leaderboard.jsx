@@ -3,21 +3,21 @@ import React, { useState } from 'react';
 // Expanded Dynamic Data for leaderboard (this can be passed in from an API or props)
 const leaderboardData = [
   { name: 'John Smith', cupsSaved: 567, co2Reduced: '28.35kg', achievements: ['Green Champion'], status: 'Active', department: 'Engineering', timeFrame: 'week' },
-  { name: 'Emma Wilson', cupsSaved: 428, co2Reduced: '21.56kg', achievements: ['Eco Warrior'], status: 'Active', department: 'Marketing', timeFrame: 'month' },
+  { name: 'Emma Wilson', cupsSaved: 1428, co2Reduced: '21.56kg', achievements: ['Eco Warrior'], status: 'Active', department: 'Marketing', timeFrame: 'month' },
   { name: 'Alex Chen', cupsSaved: 392, co2Reduced: '19.56kg', achievements: ['Eco Warrior'], status: 'Active', department: 'HR', timeFrame: 'week' },
-  { name: 'Sarah Johnson', cupsSaved: 347, co2Reduced: '17.35kg', achievements: ['Weekly Star', 'Consistent'], status: 'Active', department: 'Engineering', timeFrame: 'month' },
-  { name: 'Michael Brown', cupsSaved: 312, co2Reduced: '15.60kg', achievements: ['Rising Star'], status: 'Active', department: 'Business', timeFrame: 'all-time' },
+  { name: 'Sarah Johnson', cupsSaved: 1347, co2Reduced: '17.35kg', achievements: ['Weekly Star', 'Consistent'], status: 'Active', department: 'Engineering', timeFrame: 'month' },
+  { name: 'Michael Brown', cupsSaved: 2312, co2Reduced: '15.60kg', achievements: ['Rising Star'], status: 'Active', department: 'Business', timeFrame: 'all-time' },
   { name: 'Olivia Davis', cupsSaved: 650, co2Reduced: '32.76kg', achievements: ['Champion of the Month'], status: 'Active', department: 'Design', timeFrame: 'week' },
-  { name: 'Liam Martinez', cupsSaved: 510, co2Reduced: '25.60kg', achievements: ['Top Contributor'], status: 'Active', department: 'Operations', timeFrame: 'month' },
-  { name: 'Sophia Garcia', cupsSaved: 470, co2Reduced: '23.40kg', achievements: ['Eco Warrior'], status: 'Active', department: 'Finance', timeFrame: 'all-time' },
+  { name: 'Liam Martinez', cupsSaved: 1510, co2Reduced: '25.60kg', achievements: ['Top Contributor'], status: 'Active', department: 'Operations', timeFrame: 'month' },
+  { name: 'Sophia Garcia', cupsSaved: 2470, co2Reduced: '23.40kg', achievements: ['Eco Warrior'], status: 'Active', department: 'Finance', timeFrame: 'all-time' },
   { name: 'William Lee', cupsSaved: 350, co2Reduced: '17.80kg', achievements: ['Newcomer of the Month'], status: 'Active', department: 'Sales', timeFrame: 'week' },
-  { name: 'Ava Taylor', cupsSaved: 300, co2Reduced: '15.20kg', achievements: ['Sustainability Star'], status: 'Active', department: 'Legal', timeFrame: 'all-time' },
-  { name: 'Justin Bieber', cupsSaved: 402, co2Reduced: '19.35kg', achievements: ['Green Champion'], status: 'Active', department: 'Engineering', timeFrame: 'month' },
+  { name: 'Ava Taylor', cupsSaved: 2300, co2Reduced: '15.20kg', achievements: ['Sustainability Star'], status: 'Active', department: 'Legal', timeFrame: 'all-time' },
+  { name: 'Justin Bieber', cupsSaved: 1402, co2Reduced: '19.35kg', achievements: ['Green Champion'], status: 'Active', department: 'Engineering', timeFrame: 'month' },
   { name: 'Jonas Khanwald', cupsSaved: 444, co2Reduced: '21.75kg', achievements: ['Eco Warrior'], status: 'Active', department: 'Engineering', timeFrame: 'week' },
-  { name: 'Ayanokoji Kiyotaka', cupsSaved: 301, co2Reduced: '14.01kg', achievements: ['Sustainability Star'], status: 'Active', department: 'Engineering', timeFrame: 'month' },
-  { name: 'Horikita Suzune', cupsSaved: 750, co2Reduced: '35.35kg', achievements: ['Top Contributor'], status: 'Active', department: 'Engineering', timeFrame: 'all-time' },
+  { name: 'Ayanokoji Kiyotaka', cupsSaved: 1301, co2Reduced: '14.01kg', achievements: ['Sustainability Star'], status: 'Active', department: 'Engineering', timeFrame: 'month' },
+  { name: 'Horikita Suzune', cupsSaved: 2750, co2Reduced: '35.35kg', achievements: ['Top Contributor'], status: 'Active', department: 'Engineering', timeFrame: 'all-time' },
   { name: 'Karuizawa Kei', cupsSaved: 503, co2Reduced: '24.24kg', achievements: ['Green Champion'], status: 'Active', department: 'Engineering', timeFrame: 'week' },
-  { name: 'Sudo', cupsSaved: 560, co2Reduced: '26.35kg', achievements: ['Green Champion'], status: 'Active', department: 'Engineering', timeFrame: 'all-time' },
+  { name: 'Sudo', cupsSaved: 2560, co2Reduced: '26.35kg', achievements: ['Green Champion'], status: 'Active', department: 'Engineering', timeFrame: 'all-time' },
 ];
 
 const LeaderCard = ({ rank, name, cupsSaved, co2Reduced, achievements, status }) => {
@@ -42,7 +42,7 @@ const LeaderCard = ({ rank, name, cupsSaved, co2Reduced, achievements, status })
 };
 
 const Leaderboard = () => {
-  const [timeFrame, setTimeFrame] = useState('week'); 
+  const [timeFrame, setTimeFrame] = useState('week');
   const filteredData = leaderboardData.filter(item => item.timeFrame === timeFrame);
 
   const sortedData = filteredData.sort((a, b) => b.cupsSaved - a.cupsSaved);
